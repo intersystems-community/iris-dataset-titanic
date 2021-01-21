@@ -1,11 +1,14 @@
-## intersystems-objectscript-template
-This is a template for InterSystems ObjectScript Github repository.
-The template goes also with a few files which let you immedietly compile your ObjecScript files in InterSystems IRIS Community Edition in a docker container
+## iris-dataset-titanic
+This repository contains a class and data of Titanic passengers in a Global
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 
 ## Installation 
+
+zpm "install dataset-titanic"
+
+## Development
 
 Clone/git pull the repo into any local directory
 
@@ -16,23 +19,35 @@ $ git clone https://github.com/intersystems-community/objectscript-docker-templa
 Open the terminal in this directory and run:
 
 ```
-$ docker-compose build
-```
-
-3. Run the IRIS container with your project:
-
-```
 $ docker-compose up -d
 ```
 
 ## How to Test it
 
-Open IRIS terminal:
+In IRIS terminal:
 
 ```
 $ docker-compose exec iris iris session iris
-USER>write ##class(dc.PackageSample.ObjectScript).Test()
+USER>D $System.SQL.Shell()
+[SQL]USER>>Select * from dc_data.Titanic
+...
+890     890     1       1       Behr, Mr. Karl Howell   male    26      0       0       111369  30       C148    C
+891     891     0       3       Dooley, Mr. Patrick     male    32      0       0       370376  7.75             Q
+
+891 Rows(s) Affected
+statement prepare time(s)/globals/cmds/disk: 0.2047s/51607/268016/0ms
+          execute time(s)/globals/cmds/disk: 0.1058s/892/161300/0ms
+                          cached query class: %sqlcq.USER.cls8
 ```
+
+## In InterSystems SQL Tools in VSCode
+Open repo in VSCode (see develoment above)
+Install [InterSystems SQLTools](https://marketplace.visualstudio.com/items?itemName=intersystems-community.sqltools-intersystems-driver)
+
+Use the connection "iris-dataset-titanic"
+
+Open dc.data.Titanic table and see the records:
+
 ## How to start coding
 This repository is ready to code in VSCode with ObjectScript plugin.
 Install [VSCode](https://code.visualstudio.com/), [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) and [ObjectScript](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript) plugin and open the folder in VSCode.
@@ -45,20 +60,3 @@ Feel free to delete PackageSample folder and place your ObjectScript classes in 
 
 The script in Installer.cls will import everything you place under /src into IRIS.
 
-
-## What's inside the repository
-
-### Dockerfile
-
-The simplest dockerfile which starts IRIS and imports code from /src folder into it.
-Use the related docker-compose.yml to easily setup additional parametes like port number and where you map keys and host folders.
-
-
-### .vscode/settings.json
-
-Settings file to let you immedietly code in VSCode with [VSCode ObjectScript plugin](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript))
-
-### .vscode/launch.json
-Config file if you want to debug with VSCode ObjectScript
-
-[Read about all the files in this artilce](https://community.intersystems.com/post/dockerfile-and-friends-or-how-run-and-collaborate-objectscript-projects-intersystems-iris)

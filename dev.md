@@ -53,3 +53,9 @@ zn "%SYS" \
 
 zw ##class(community.csvgen).GenerateFromURL("https://github.com/h2oai/h2o-tutorials/raw/master/h2o-world-2017/automl/data/product_backorders.csv")
 
+## Globals export
+d $System.OBJ.Export("dc.data.TitanicD.GBL","/irisrun/repo/data/dc.data.TitanicD.xml")
+
+
+src/dc/gbl/dc.data.TitanicD.xml
+src/gbl/dc.data.TitanicD.xml

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="objectscript-template.ZPM">
+  <Document name="dataset-titanic.ZPM">
     <Module>
-      <Name>objectscript-template</Name>
-      <Version>1.1.2</Version>
+      <Name>dataset-titanic</Name>
+      <Description>Module imports the data of Titanic passengers in dc.data.Tinanic class</Description>
+      <Version>1.0.0</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
-      <Resource Name="dc.PackageSample.PKG"/>
+      <Resource Name="dc.data.PKG"/>
+      <Resource Name="dc.data.TitanicD.GBL"/>
     </Module>
   </Document>
 </Export>

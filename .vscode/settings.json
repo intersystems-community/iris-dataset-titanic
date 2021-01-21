@@ -21,10 +21,10 @@
         "showSystem": false,
         "previewLimit": 50,
         "server": "localhost",
-        "port": 32770,
+        "port": 55007,
         "askForPassword": false,
         "driver": "InterSystems IRIS",
-        "name": "objectscript-docker",
+        "name": "iris-dataset-titanic",
         "username": "_SYSTEM",
         "password": "SYS"
       }

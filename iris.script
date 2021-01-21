@@ -4,5 +4,8 @@ zn "%SYS"
 Do ##class(Security.Users).UnExpireUserPasswords("*")
 
 zn "USER"
+; zpm "install csvgen"
+; d ##class(community.csvgen).GenerateFromURL("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv",",","dc.data.Titanic")
+
 zpm "load /opt/irisbuild/ -v":1:1
 halt
