@@ -47,6 +47,8 @@ Install [InterSystems SQLTools](https://marketplace.visualstudio.com/items?itemN
 Use the connection "iris-dataset-titanic"
 
 Open dc.data.Titanic table and see the records:
+<img width="968" alt="Screenshot 2021-01-21 at 13 33 53" src="https://user-images.githubusercontent.com/2781759/105340135-8e23ff80-5bee-11eb-9e5e-ff87dfdab047.png">
+
 
 ## How to start coding
 This repository is ready to code in VSCode with ObjectScript plugin.
