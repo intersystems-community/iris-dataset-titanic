@@ -1,6 +1,9 @@
 ## iris-dataset-titanic
 This repository contains a class and data of Titanic passengers in a Global
 
+## Source
+The dataset is taken from [this repository](https://github.com/datasciencedojo/datasets/blob/master/titanic.csv)
+
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 
