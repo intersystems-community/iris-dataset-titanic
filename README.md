@@ -1,4 +1,7 @@
 ## iris-dataset-titanic
+[![Quality Gate Status](https://community.objectscriptquality.com/api/project_badges/measure?project=intersystems_iris_community%2Firis-dataset-titanic&metric=alert_status)](https://community.objectscriptquality.com/dashboard?id=intersystems_iris_community%2Firis-dataset-titanic) 
+
+
 This repository contains a class and data of Titanic passengers in a Global
 
 ## Dataset Source and license
